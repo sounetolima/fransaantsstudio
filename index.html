@@ -14,7 +14,7 @@
 <meta property="og:image" content="fachada.jpg">
 <meta property="og:locale" content="pt_BR">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"NailSalon","name":"Studio Fraan Santos","telephone":"+55 79 99978-0863","image":"fachada.jpg","address":{"@type":"PostalAddress","streetAddress":"Av. Francisco José da Fonseca, 1003","addressLocality":"Aracaju","addressRegion":"SE","postalCode":"49042-000","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"18:00"}],"hasMap":"https://maps.app.goo.gl/QUjmkr1NL8gfJe1L9","sameAs":["https://instagram.com/studio_fraanstts"]}
+{"@context":"https://schema.org","@type":"NailSalon","name":"Studio Fraan Santos","telephone":"+55 79 99978-0863","priceRange":"R$30 - R$130","image":"fachada.jpg","address":{"@type":"PostalAddress","streetAddress":"Av. Francisco José da Fonseca, 1003","addressLocality":"Aracaju","addressRegion":"SE","postalCode":"49042-000","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"18:00"}],"hasMap":"https://maps.app.goo.gl/QUjmkr1NL8gfJe1L9","sameAs":["https://instagram.com/studio_fraanstts"]}
 </script>
 <link rel="preload" as="image" href="hero.jpg" fetchpriority="high">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b2a29'/%3E%3Ctext x='32' y='42' font-size='30' text-anchor='middle' fill='%23f26fc4' font-family='Georgia,serif' font-style='italic'%3Efs%3C/text%3E%3C/svg%3E">
@@ -84,6 +84,29 @@ nav a:hover{opacity:1;color:var(--rosa)}
 .card a{display:inline-block;margin-top:14px;color:var(--rosa);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
 .publico{margin-top:28px;text-align:center;font-family:var(--serif);font-size:1.4rem;font-style:italic;color:var(--rosa)}
 
+/* tabela de valores */
+[id]{scroll-margin-top:64px}
+#valores{background:#fff}
+.vgrid{display:grid;gap:18px;margin-top:34px}
+@media(min-width:900px){.vgrid{grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}}
+.vcard{position:relative;background:#fff;border:1px solid #f0d9e8;border-top:5px solid var(--rosa);border-radius:20px;padding:26px 24px 14px;box-shadow:0 14px 34px rgba(194,24,111,.08)}
+.vcard .tag{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--rosa-forte)}
+.vcard h3{font-family:var(--serif);font-weight:600;font-size:1.7rem;line-height:1.1;margin:4px 0 12px}
+.vcard ul{list-style:none}
+.vrow{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-top:1px solid #f4e6ee}
+.vrow:first-child{border-top:0}
+.vrow .nome{font-weight:500;font-size:.95rem}
+.vrow .dots{flex:1;min-width:14px;border-bottom:2px dotted #dfc3d4;transform:translateY(-4px)}
+.vrow .preco{font-weight:700;font-size:1.1rem;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--carvao)}
+.vrow .preco small{font-weight:500;font-size:.7rem;color:var(--muted);margin-right:4px}
+.vcard.destaque{background:var(--carvao);border-color:var(--carvao);border-top-color:var(--rosa);color:#fff}
+.vcard.destaque .tag{color:var(--rosa)}
+.vcard.destaque .vrow{border-top-color:rgba(255,255,255,.12)}
+.vcard.destaque .vrow:first-child{border-top:0}
+.vcard.destaque .dots{border-bottom-color:rgba(242,111,196,.45)}
+.vcard.destaque .preco{color:var(--rosa)}
+.vcard.destaque .preco small{color:#cfc8cc}
+.vcta{text-align:center;margin-top:30px}
 /* sobre */
 #sobre{background:var(--lilas)}
 .sobre{display:grid;gap:34px;align-items:center}
@@ -160,6 +183,7 @@ footer .soc a{padding:12px 6px}
     <nav aria-label="Principal">
       <ul>
         <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#valores">Valores</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#galeria">Galeria</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -200,6 +224,29 @@ footer .soc a{padding:12px 6px}
       <article class="card reveal"><div class="n">05</div><h3>Manicure e Pedicure Tradicional</h3><p>O cuidado clássico para mãos e pés, com capricho e higiene.</p><a href="#contato">Agendar →</a></article>
       <article class="card reveal" style="display:grid;place-content:center;text-align:center;background:var(--rosa);border-color:var(--rosa);color:var(--carvao-2)"><div class="n" style="color:var(--carvao-2)">♡</div><h3>Público feminino e masculino</h3><p style="color:var(--carvao-2)">Todo mundo merece unhas bem cuidadas.</p></article>
     </div>
+  </div>
+</section>
+
+<section id="valores">
+  <div class="wrap">
+    <p class="eyebrow reveal">Valores</p>
+    <h2 class="reveal">Tabela de <em>valores</em></h2>
+    <p class="lead reveal">Transparência para você escolher com tranquilidade. Agende seu horário e a gente cuida do resto.</p>
+    <div class="vgrid">
+      <article class="vcard destaque reveal">
+        <span class="tag">Molde F1</span><h3>Alongamento</h3>
+        <ul><li class="vrow"><span class="nome">Alongamento em gel</span><span class="dots" aria-hidden="true"></span><span class="preco"><small>R$</small>130,00</span></li><li class="vrow"><span class="nome">Manutenção</span><span class="dots" aria-hidden="true"></span><span class="preco"><small>R$</small>80,00</span></li></ul>
+      </article>
+      <article class="vcard reveal">
+        <span class="tag">Fortalecimento</span><h3>Banho em gel</h3>
+        <ul><li class="vrow"><span class="nome">Banho em gel</span><span class="dots" aria-hidden="true"></span><span class="preco"><small>R$</small>100,00</span></li><li class="vrow"><span class="nome">Manutenção do banho</span><span class="dots" aria-hidden="true"></span><span class="preco"><small>R$</small>70,00</span></li></ul>
+      </article>
+      <article class="vcard reveal">
+        <span class="tag">Cuidado e acabamento</span><h3>Demais serviços</h3>
+        <ul><li class="vrow"><span class="nome">Esmaltação em gel</span><span class="dots" aria-hidden="true"></span><span class="preco"><small>R$</small>60,00</span></li><li class="vrow"><span class="nome">Postiça realista</span><span class="dots" aria-hidden="true"></span><span class="preco"><small>R$</small>50,00</span></li><li class="vrow"><span class="nome">Manicure</span><span class="dots" aria-hidden="true"></span><span class="preco"><small>R$</small>30,00</span></li><li class="vrow"><span class="nome">Pedicure</span><span class="dots" aria-hidden="true"></span><span class="preco"><small>R$</small>30,00</span></li></ul>
+      </article>
+    </div>
+    <p class="vcta reveal"><a class="btn btn-rosa" href="https://wa.me/5579999780863?text=Ol%C3%A1!%20Vi%20a%20tabela%20de%20valores%20no%20site%20e%20quero%20agendar." target="_blank" rel="noopener">Agendar meu horário</a></p>
   </div>
 </section>
 
@@ -318,7 +365,15 @@ document.getElementById('form').addEventListener('submit',e=>{
   if(f.msg.value.trim()) txt+=` ${f.msg.value.trim()}`;
   window.open('https://wa.me/5579999780863?text='+encodeURIComponent(txt),'_blank','noopener');
 });
-const tv=document.getElementById('tourVideo');if(tv){tv.muted=true;tv.defaultMuted=true;const vio=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const p=tv.play();if(p&&p.catch)p.catch(()=>{tv.controls=true})}else{tv.pause()}}),{threshold:.35});vio.observe(tv);document.addEventListener('visibilitychange',()=>{if(document.hidden)tv.pause()})}const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+const tv=document.getElementById('tourVideo');
+if(tv){tv.muted=true;tv.defaultMuted=true;
+  const vio=new IntersectionObserver(es=>es.forEach(x=>{
+    if(x.isIntersecting){const p=tv.play();if(p&&p.catch)p.catch(()=>{tv.controls=true})}else{tv.pause()}
+  }),{threshold:.35});
+  vio.observe(tv);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)tv.pause()});
+}
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
