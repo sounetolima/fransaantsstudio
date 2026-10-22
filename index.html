@@ -240,7 +240,7 @@ footer .soc a{padding:12px 6px}
       </div>
     </div>
     <div class="tour reveal">
-      <video controls playsinline preload="metadata" poster="tour-poster.jpg" aria-label="Tour pelo Studio Fraan Santos">
+      <video id="tourVideo" muted loop playsinline preload="none" disablepictureinpicture poster="tour-poster.jpg" aria-label="Tour pelo Studio Fraan Santos">
         <source src="tour.mp4" type="video/mp4">
       </video>
       <p>Faça um tour pelo studio</p>
@@ -318,7 +318,7 @@ document.getElementById('form').addEventListener('submit',e=>{
   if(f.msg.value.trim()) txt+=` ${f.msg.value.trim()}`;
   window.open('https://wa.me/5579999780863?text='+encodeURIComponent(txt),'_blank','noopener');
 });
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+const tv=document.getElementById('tourVideo');if(tv){tv.muted=true;tv.defaultMuted=true;const vio=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const p=tv.play();if(p&&p.catch)p.catch(()=>{tv.controls=true})}else{tv.pause()}}),{threshold:.35});vio.observe(tv);document.addEventListener('visibilitychange',()=>{if(document.hidden)tv.pause()})}const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
